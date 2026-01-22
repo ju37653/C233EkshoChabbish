@@ -44,7 +44,7 @@ async function api(path, options = {}) {
   const headers = { "Content-Type": "application/json" };
   if (token) headers.Authorization = "Bearer " + token;
 
-  const API_BASE = "http://localhost:3000"; // your backend port
+  const API_BASE = "http://localhost:3000";
 
   const res = await fetch(API_BASE + path, {
     ...options,
