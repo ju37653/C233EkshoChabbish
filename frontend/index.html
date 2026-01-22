@@ -32,29 +32,33 @@
             <input id="siPass" type="password" class="input" placeholder="Password" />
 
             <button id="btnSignin" class="btn btn-neutral mt-4">Login</button>
-            <div class="text-sm opacity-80">
+            <div class="text-sm opacity-80 flex justify-center">
               Don’t have an account?
               <button id="btnGoSignup" class="link link-primary">Sign up</button>
             </div>
         </fieldset>
     </div>
 
-    <div class="flex justify-center">
+    <div id="viewSignup" class="flex justify-center">
         <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
             <legend class="fieldset-legend">Register</legend>
 
             <label class="label">First Name</label>
-            <input type="text" class="input" placeholder="First Name" />
+            <input id="suFirst" type="text" class="input" placeholder="First Name" />
             <label class="label">Last Name</label>
-            <input type="text" class="input" placeholder="Last Name" />
+            <input id="suLast" type="text" class="input" placeholder="Last Name" />
 
             <label class="label">Email</label>
-            <input type="email" class="input" placeholder="Email" />
+            <input id="suEmail" type="email" class="input" placeholder="Email" />
 
             <label class="label">Password</label>
-            <input type="password" class="input" placeholder="Password" />
+            <input id="suPass" type="password" class="input" placeholder="Password" />
 
-            <button class="btn btn-neutral mt-4">Register</button>
+            <button id="btnSignup" class="btn btn-neutral mt-4">Register</button>
+            <div class="text-sm opacity-80 flex justify-center">
+              Already have an account?
+              <button id="btnGoSignin" class="link link-primary">Sign in</button>
+            </div>
         </fieldset>
     </div>
 
