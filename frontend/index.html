@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="">
-        <h1 class="text-4xl font-bold text-center mt-10">Welcome to EkshoChabbish</h1>
+        <h1 class="text-4xl font-bold text-center mt-10">Manage Your Todos</h1>
         <div class="flex justify-center mt-10">
             <button id="loginBtn" class="btn btn-neutral mr-4">Login</button>
             <button id="registerBtn" class="btn btn-secondary">Register</button>
@@ -21,17 +21,21 @@
         <script src="app.js"></script>
     </div>
 
-    <div class="flex justify-center">
+    <div id="viewSignin" class="flex justify-center">
         <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
             <legend class="fieldset-legend">Login</legend>
 
             <label class="label">Email</label>
-            <input type="email" class="input" placeholder="Email" />
+            <input id="siEmail" type="email" class="input" placeholder="Email" />
 
             <label class="label">Password</label>
-            <input type="password" class="input" placeholder="Password" />
+            <input id="siPass" type="password" class="input" placeholder="Password" />
 
-            <button class="btn btn-neutral mt-4">Login</button>
+            <button id="btnSignin" class="btn btn-neutral mt-4">Login</button>
+            <div class="text-sm opacity-80">
+              Don’t have an account?
+              <button id="btnGoSignup" class="link link-primary">Sign up</button>
+            </div>
         </fieldset>
     </div>
 
@@ -52,6 +56,44 @@
 
             <button class="btn btn-neutral mt-4">Register</button>
         </fieldset>
+    </div>
+
+    <div class="max-w-5xl mx-auto flex justify-center gap-5">
+        <div>
+            <div class="collapse bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-1" checked="checked" />
+                <div class="collapse-title font-semibold">How do I create an account?</div>
+                <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
+            </div>
+            <div class="collapse bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
+                <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
+            </div>
+            <div class="collapse bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title font-semibold">How do I update my profile information?</div>
+                <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+            </div>
+        </div>
+        <div>
+            <div class="collapse bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-1" checked="checked" />
+                <div class="collapse-title font-semibold">How do I create an account?</div>
+                <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
+            </div>
+            <div class="collapse bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
+                <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
+            </div>
+            <div class="collapse bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title font-semibold">How do I update my profile information?</div>
+                <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+            </div>
+        </div>
+        
     </div>
 
     <script src="app.js"></script>
