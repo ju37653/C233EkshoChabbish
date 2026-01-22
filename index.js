@@ -1,10 +1,12 @@
 import express from "express";
 import authRoutes from "./routes/authRoutes.js";
 import todoRoutes from "./routes/todoRoutes.js";
+import cors from "cors";
 
 const app = express();
 const port = 3000;
 
+app.use(cors());
 app.use(express.static("frontend"));
 app.use(express.json());
 
