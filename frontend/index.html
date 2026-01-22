@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EkshoChabbish</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="">
+        <h1 class="text-4xl font-bold text-center mt-10">Welcome to EkshoChabbish</h1>
+        <div class="flex justify-center mt-10">
+            <button id="loginBtn" class="btn btn-neutral mr-4">Login</button>
+            <button id="registerBtn" class="btn btn-secondary">Register</button>
+        </div>
+        <div id="formContainer" class="mt-10 flex justify-center"></div>
+
+        <script src="app.js"></script>
+    </div>
+
+    <div class="flex justify-center">
+        <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+            <legend class="fieldset-legend">Login</legend>
+
+            <label class="label">Email</label>
+            <input type="email" class="input" placeholder="Email" />
+
+            <label class="label">Password</label>
+            <input type="password" class="input" placeholder="Password" />
+
+            <button class="btn btn-neutral mt-4">Login</button>
+        </fieldset>
+    </div>
+
+    <div class="flex justify-center">
+        <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+            <legend class="fieldset-legend">Register</legend>
+
+            <label class="label">First Name</label>
+            <input type="text" class="input" placeholder="First Name" />
+            <label class="label">Last Name</label>
+            <input type="text" class="input" placeholder="Last Name" />
+
+            <label class="label">Email</label>
+            <input type="email" class="input" placeholder="Email" />
+
+            <label class="label">Password</label>
+            <input type="password" class="input" placeholder="Password" />
+
+            <button class="btn btn-neutral mt-4">Register</button>
+        </fieldset>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
