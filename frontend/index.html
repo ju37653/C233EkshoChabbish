@@ -1,90 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EkshoChabbish</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-    <div class="">
-        <h1 class="text-4xl font-bold text-center mt-10">Manage Your Todos</h1>
-        <div class="flex justify-center mt-10">
-            <button id="loginBtn" class="btn btn-neutral mr-4">Login</button>
-            <button id="registerBtn" class="btn btn-secondary">Register</button>
-        </div>
-        <div id="formContainer" class="mt-10 flex justify-center"></div>
 
-        <div id="viewSignin" class="flex justify-center">
-        <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-base-200 min-h-screen">
+
+    <h1 class="text-4xl font-bold text-center pt-10">Manage Your Todos</h1>
+
+    <div id="viewSignin" class="flex justify-center mt-10">
+        <fieldset class="fieldset bg-base-100 border rounded-box w-xs p-6">
             <legend class="fieldset-legend">Login</legend>
 
             <label class="label">Email</label>
-            <input id="siEmail" type="email" class="input" placeholder="Email" />
+            <input id="siEmail" type="email" class="input input-bordered" />
 
             <label class="label">Password</label>
-            <input id="siPass" type="password" class="input" placeholder="Password" />
+            <input id="siPass" type="password" class="input input-bordered" />
 
             <button id="btnSignin" class="btn btn-neutral mt-4">Login</button>
-            <div class="text-sm opacity-80 flex justify-center">
-              Don’t have an account?
-              <button id="btnGoSignup" class="link link-primary">Sign up</button>
+
+            <div class="text-sm mt-2 text-center">
+                Don’t have an account?
+                <button id="btnGoSignup" class="link link-primary">Sign up</button>
             </div>
         </fieldset>
     </div>
 
-    <div id="viewSignup" class="flex justify-center">
-        <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+    <div id="viewSignup" class="flex justify-center mt-10 hidden">
+        <fieldset class="fieldset bg-base-100 border rounded-box w-xs p-6">
             <legend class="fieldset-legend">Register</legend>
 
             <label class="label">First Name</label>
-            <input id="suFirst" type="text" class="input" placeholder="First Name" />
+            <input id="suFirst" type="text" class="input input-bordered" />
+
             <label class="label">Last Name</label>
-            <input id="suLast" type="text" class="input" placeholder="Last Name" />
+            <input id="suLast" type="text" class="input input-bordered" />
 
             <label class="label">Email</label>
-            <input id="suEmail" type="email" class="input" placeholder="Email" />
+            <input id="suEmail" type="email" class="input input-bordered" />
 
             <label class="label">Password</label>
-            <input id="suPass" type="password" class="input" placeholder="Password" />
+            <input id="suPass" type="password" class="input input-bordered" />
 
             <button id="btnSignup" class="btn btn-neutral mt-4">Register</button>
-            <div class="text-sm opacity-80 flex justify-center">
-              Already have an account?
-              <button id="btnGoSignin" class="link link-primary">Sign in</button>
+
+            <div class="text-sm mt-2 text-center">
+                Already have an account?
+                <button id="btnGoSignin" class="link link-primary">Sign in</button>
             </div>
         </fieldset>
     </div>
 
-    <div id="viewApp" class="max-w-5xl mx-auto flex justify-center gap-5">
+    <div id="viewApp" class="hidden max-w-6xl mx-auto mt-10">
+        <div class="grid grid-cols-2 gap-6">
+
         <div>
-            <div class="collapse bg-base-100 border border-base-300">
-                
-                <input type="radio" name="my-accordion-1" checked="checked" />
-                <div class="collapse-title font-semibold">How do I create an account?</div>
-                <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-                
-                <div class="flex flex-row justify-end p-2">
-                    <button >
-                        <img src="./public/don.png" alt="done" class="w-8">
-                    </button>
-                    <button>
-                        <img src="./public/cors.png" alt="cancel" class="w-8">
-                    </button>
-                </div>
-            </div>
+            <h2 class="text-xl font-semibold mb-3">Active Todos</h2>
+            <div id="todoActive"></div>
         </div>
+
         <div>
-            <div class="collapse bg-base-100 border border-base-300">
-                <input type="radio" name="my-accordion-1" checked="checked" />
-                <div class="collapse-title font-semibold">How do I create an account?</div>
-                <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-            </div>
+            <h2 class="text-xl font-semibold mb-3">Completed Todos</h2>
+            <div id="todoDone"></div>
         </div>
-        <script src="./app.js"></script>
+
+        </div>
+        <div id="out" class="text-error mt-4 text-center"></div>
     </div>
+
+    <script src="./app.js"></script>
 </body>
 </html>
