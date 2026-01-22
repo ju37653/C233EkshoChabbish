@@ -23,7 +23,7 @@ export * from "./enums.js";
  * ```
  * const prisma = new PrismaClient()
  * // Fetch zero or more Users
- * const users = await prisma.user.findMany()
+ * const users = await prisma.users.findMany()
  * ```
  *
  * Read more in our [docs](https://pris.ly/d/client).

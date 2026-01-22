@@ -10,7 +10,7 @@ export interface PrismaClientConstructor {
    * ```
    * const prisma = new PrismaClient()
    * // Fetch zero or more Users
-   * const users = await prisma.user.findMany()
+   * const users = await prisma.users.findMany()
    * ```
    *
    * Read more in our [docs](https://pris.ly/d/client).
@@ -27,7 +27,7 @@ export interface PrismaClientConstructor {
  * ```
  * const prisma = new PrismaClient()
  * // Fetch zero or more Users
- * const users = await prisma.user.findMany()
+ * const users = await prisma.users.findMany()
  * ```
  *
  * Read more in our [docs](https://pris.ly/d/client).
@@ -111,6 +111,28 @@ export interface PrismaClient<in LogOpts extends Prisma.LogLevel = never, in out
     $extends: runtime.Types.Extensions.ExtendsHook<"extends", Prisma.TypeMapCb<OmitOpts>, ExtArgs, runtime.Types.Utils.Call<Prisma.TypeMapCb<OmitOpts>, {
         extArgs: ExtArgs;
     }>>;
+    /**
+ * `prisma.users`: Exposes CRUD operations for the **users** model.
+  * Example usage:
+  * ```ts
+  * // Fetch zero or more Users
+  * const users = await prisma.users.findMany()
+  * ```
+  */
+    get users(): Prisma.usersDelegate<ExtArgs, {
+        omit: OmitOpts;
+    }>;
+    /**
+     * `prisma.todos`: Exposes CRUD operations for the **todos** model.
+      * Example usage:
+      * ```ts
+      * // Fetch zero or more Todos
+      * const todos = await prisma.todos.findMany()
+      * ```
+      */
+    get todos(): Prisma.todosDelegate<ExtArgs, {
+        omit: OmitOpts;
+    }>;
 }
 export declare function getPrismaClientClass(): PrismaClientConstructor;
 //# sourceMappingURL=class.d.ts.map

@@ -25,7 +25,10 @@ export declare const JsonNull: import("@prisma/client-runtime-utils").JsonNullCl
  * @see https://www.prisma.io/docs/concepts/components/prisma-client/working-with-fields/working-with-json-fields#filtering-on-a-json-field
  */
 export declare const AnyNull: import("@prisma/client-runtime-utils").AnyNullClass;
-export declare const ModelName: {};
+export declare const ModelName: {
+    readonly users: "users";
+    readonly todos: "todos";
+};
 export type ModelName = (typeof ModelName)[keyof typeof ModelName];
 export declare const TransactionIsolationLevel: {
     readonly ReadUncommitted: "ReadUncommitted";
@@ -34,4 +37,39 @@ export declare const TransactionIsolationLevel: {
     readonly Serializable: "Serializable";
 };
 export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel];
+export declare const UsersScalarFieldEnum: {
+    readonly id: "id";
+    readonly email: "email";
+    readonly first_name: "first_name";
+    readonly last_name: "last_name";
+    readonly password_hash: "password_hash";
+    readonly created_at: "created_at";
+    readonly updated_at: "updated_at";
+};
+export type UsersScalarFieldEnum = (typeof UsersScalarFieldEnum)[keyof typeof UsersScalarFieldEnum];
+export declare const TodosScalarFieldEnum: {
+    readonly id: "id";
+    readonly user_id: "user_id";
+    readonly title: "title";
+    readonly description: "description";
+    readonly completed: "completed";
+    readonly created_at: "created_at";
+    readonly updated_at: "updated_at";
+};
+export type TodosScalarFieldEnum = (typeof TodosScalarFieldEnum)[keyof typeof TodosScalarFieldEnum];
+export declare const SortOrder: {
+    readonly asc: "asc";
+    readonly desc: "desc";
+};
+export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder];
+export declare const QueryMode: {
+    readonly default: "default";
+    readonly insensitive: "insensitive";
+};
+export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode];
+export declare const NullsOrder: {
+    readonly first: "first";
+    readonly last: "last";
+};
+export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder];
 //# sourceMappingURL=prismaNamespaceBrowser.d.ts.map
